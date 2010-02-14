@@ -1,3 +1,9 @@
+/* jason-o-toole 1.0  
+ *
+ * Copyright (c) 2010 Francois Lafortune  (quickredfox.at)
+ * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php 
+ *
+*/
 body{margin:0;padding:0;}
 body:before{
 	content:'Hovering over names will display jsonPath() equivalent in tooltip...';

@@ -1,3 +1,10 @@
+/* jason-o-toole 1.0  
+ *
+ * Copyright (c) 2010 Francois Lafortune  (quickredfox.at)
+ * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php 
+ *
+*/
+
 // Play on "JSON Object Tool"
 var JSONoToole = new
 function JSONoToole() {

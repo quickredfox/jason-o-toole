@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>example</title>
+	<link rel="stylesheet" href="../jason-o-toole.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../jason-o-toole.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(function() {
+		    $.ajax({
+		        url: 'api.praized.com-actions.json',
+		        dataType: 'json',
+		        success: function(json) {
+		            var data = JSONoToole.html(json);
+		            $(document.body).html(data.value)
+		        }
+		    })
+
+		})
+	</script>
+</head>
+
+<body>
+
+
+</body>
+</html>

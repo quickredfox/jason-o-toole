@@ -15,7 +15,10 @@
 		        dataType: 'json',
 		        success: function(json) {
 		            var data = JSONoToole.html(json);
-		            $(document.body).html(data.value)
+		            $(document.body).html(data.value);
+					if(window.console && window.console.debug){
+						window.console.debug(JSONoToole.interesting(json))
+					}
 		        }
 		    })
 

@@ -12,7 +12,7 @@ Usage:
  JSONoToole.notations(jsonObject) // returns ["$.Am" ,"$.Am.gram","$.Am.gram[0]","$.Am.gram[1]","$.Am.gram.colegram"];
 
  // Or grab all the values from a json Object, regardless of their access path
- JSONoToole.values(jsonObject)
+ JSONoToole.values(jsonObject) // returns ["stram","pike","pike","true"];
 
  // Combo of previous methods, meatn as a sort of object inspector...
  JSONoToole.interesting(jsonObject)

@@ -79,7 +79,12 @@ function JSONoToole() {
                 toNotation(item, refO, notation + '[' + (index - 1) + ']');
             },
             object: function(key, item) {
-                refO.value.push((notation = notation + ('.' + key)));
+				if((/[\s\n\r]/gm).test(key)){
+					notation = notation + ('["' + key +'"]');
+				}else{
+					notation = notation + ('.' + key);		
+				}
+                refO.value.push(notation);
                 toNotation(item, refO, notation);
             },
             other: noop
@@ -123,7 +128,11 @@ function JSONoToole() {
             },
             object: function(key, item) {
                 var itemClass = (isO(item) ? 'object' : isA(item) ? 'array' : 'string');
-				title = notation + ('.' + key);
+				if((/[\s\n\r]/gm).test(key)){
+					title = notation + ('["' + key +'"]');
+				}else{
+					title = notation + ('.' + key);		
+				}
 				refO.notation.push(title);
                 refO.value += '<dt title="'+title+'" class="property-name ' + itemClass + '-property-name"><span class="property-type">'+itemClass+':</span>' 
 						   + key + '</dt><dd class="property-value ' + itemClass + '-property-value">';
@@ -136,7 +145,7 @@ function JSONoToole() {
             }
         });
         refO.value += anO ? '</ol>': anA ? '</dl>': '';
-    }
+    };
 
     // PUBLIC SCOPE
     this.notation = function getDotNotations(object) {

@@ -128,8 +128,8 @@ function JSONoToole() {
             },
             object: function(key, item) {
                 var itemClass = (isO(item) ? 'object' : isA(item) ? 'array' : 'string');
-				if((/[\s\n\r]/gm).test(key)){
-					title = notation + ('["' + key +'"]');
+				if((/[\s\n\r\@\%\-\.]/gm).test(key)){
+					title = notation + ("['"+ key +"']");
 				}else{
 					title = notation + ('.' + key);		
 				}
@@ -188,4 +188,3 @@ function JSONoToole() {
     };
     this.recurseTypes = _recurseTypes;
 }
-

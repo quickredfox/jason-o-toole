@@ -17,5 +17,12 @@ Usage:
  JSONoToole.html(jsonObject)
 </pre> 
 
+TODO: 
+
+ - add real support for all JSON types (http://www.json.org/) (currently displays anything that's not an array or object as a string)
+ - add jquery-extensions (clickables, data() etc..)
+
+
+
 ![screenshot](http://github.com/quickredfox/jason-o-toole/raw/master/screenshot.png "Screenshot")
 
